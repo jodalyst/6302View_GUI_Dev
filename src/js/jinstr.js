@@ -224,7 +224,7 @@ var plot_buffer = [];
 
 var MessageParser = function(evt) {
     // Merge new packet with what's left of the last packet, and make int view
-    var tData = mergeArrBuf(tDataSave, event.data);
+    var tData = mergeArrBuf(tDataSave, evt.data);
     var tDataB = new Uint8Array(tData);  // Need Int view for comparison
     //console.log(tDataB);
     var startNext = 0;
