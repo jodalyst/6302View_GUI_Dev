@@ -148,6 +148,14 @@ var WipeGUI = function(){
         var to_junk = div_list.pop();
         to_junk.remove();
     }
+    for (var i=0; i<user_inputs.length;i++){
+        var to_junk = user_inputs.pop();
+        delete to_junk;
+    }
+    for (var i=0; i<displayers.length;i++){
+        var to_junk = displayers.pop();
+        delete to_junk;
+    }
 };
 
 // Generic helper functions
