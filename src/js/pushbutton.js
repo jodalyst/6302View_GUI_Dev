@@ -36,13 +36,13 @@ function Button(unique,title,color=null,bg_color=null){
     setup();
 
     button_element.addEventListener("mousedown",function(){
-        var local_change = new CustomEvent('ui_change',{detail:{"message":String(unique)+":"+String(1)}});
+        var local_change = new CustomEvent('ui_change',{detail:{"message":String(unique)+":"+String(true)}});
         document.dispatchEvent(local_change);
         //var local_change = new CustomEvent('ui_change',{unique:"True"});
         //document.dispatchEvent(local_change);        
     });
     button_element.addEventListener('mouseup',function(){
-        var local_change = new CustomEvent('ui_change',{detail:{"message":String(unique)+":"+String(0)}});
+        var local_change = new CustomEvent('ui_change',{detail:{"message":String(unique)+":"+String(false)}});
         document.dispatchEvent(local_change);
     });
 
