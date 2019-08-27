@@ -25,8 +25,8 @@ void setup() {
    cm.addPlot(&output2, "Output2", -1, 30,40);
 
    /* Ready to communicate over serial */
-   cm.connect(&Serial, 115200);
-   //cm.connect("Cat_316", "Comcastsucks99..");
+   //cm.connect(&Serial, 115200);
+   cm.connect("Cat_316", "Comcastsucks99..");
 }
 
 void loop() {

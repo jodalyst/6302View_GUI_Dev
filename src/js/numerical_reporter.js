@@ -9,10 +9,10 @@ function Numerical_Reporter(unique,title,data_type,color=null,bg_color=null){
     var unique = unique; //unique identifying number
 
     var format = function(value){
-        if (precision==null){
+        if (data_type==="float"){
             return value;
         } else{
-            return value.toPrecision(precision);
+            return parseInt(value);
         }
 
     }

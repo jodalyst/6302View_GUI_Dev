@@ -57,8 +57,10 @@ function Toggle(unique,title,names=["OFF","ON"]){
     setup();
     var checko = function(element){
         ///value_div.innerHTML = names[slider_input.checked?1:0];
-        var local_change = new CustomEvent('ui_change',{unique:slider_input.checked});
-        document.dispatchEvent(local_change);        
+        //var local_change = new CustomEvent('ui_change',{unique:slider_input.checked});
+        //document.dispatchEvent(local_change);     
+        var local_change = new CustomEvent('ui_change',{detail:{"message":String(unique)+":"+String(slider_input.checked)}});
+        document.dispatchEvent(local_change);         
     }     
     slider_input.addEventListener('change', checko, false);
 };

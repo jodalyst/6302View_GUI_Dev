@@ -224,7 +224,7 @@ var plot_buffer = [];
 
 var MessageParser = function(evt) {
     // Merge new packet with what's left of the last packet, and make int view
-    var tData = mergeArrBuf(tDataSave, event.data);
+    var tData = mergeArrBuf(tDataSave, evt.data);
     var tDataB = new Uint8Array(tData);  // Need Int view for comparison
     //console.log(tDataB);
     var startNext = 0;
@@ -394,7 +394,7 @@ function MPBuild(intData) {
                 var depth = parseInt(build_array[i+3]); //need to change
                 report_count.push(1);
                 report_depth.push(depth);
-                displayers.push(new Numerical_Reporter("box_"+String(unique_counter),unique_counter,title,type,"red","black"));
+                displayers.push(new Numerical_Reporter(unique_counter,title,type,"red","black"));
                 csv_col_headers.push(title);
                 i+=4;
                 break;
